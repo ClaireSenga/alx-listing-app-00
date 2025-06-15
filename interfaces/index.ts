@@ -1,35 +1,23 @@
-export interface CardProps {
-	title: string
-	imageUrl: string
-	children?: React.ReactNode
-}
-
-export interface ButtonProps {
-	label: string
-	onClick: () => void
-}
-
-// interfaces/index.ts
-
-export interface Address {
-  state: string;
+export interface PropertyAddress {
   city: string;
   country: string;
 }
 
-export interface Offers {
-  bed: string;
-  shower: string;
-  occupants: string;
+export interface Review {
+  name: string;
+  avatar: string;
+  rating: number;
+  comment: string;
 }
 
 export interface PropertyProps {
   name: string;
-  address: Address;
   rating: number;
-  category: string[];   // e.g. ["Luxury Villa", "Pool", …]
+  address: PropertyAddress;
+  image: string;
+  images?: string[]; // optional for gallery
+  description: string;
+  category: string[]; // amenities
   price: number;
-  offers: Offers;       // bed/shower/occupants info
-  image: string;        // URL to the image
-  discount: string;     // e.g. "30" or "" if none
+  reviews: Review[];
 }

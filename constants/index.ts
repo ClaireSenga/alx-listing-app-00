@@ -1,29 +1,32 @@
-export const API_URL = 'https://api.example.com'
-export const APP_NAME = 'ALX Listing App'
-
-// constants/index.ts
 import { PropertyProps } from "@/interfaces";
 
 export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   {
-    name: "Villa Ocean Breeze",
-    address: { state: "Seminyak", city: "Bali", country: "Indonesia" },
-    rating: 4.89,
-    category: ["Luxury Villa", "Pool", "Free Parking"],
-    price: 3200,
-    offers: { bed: "3", shower: "3", occupants: "4-6" },
-    image: "https://example.com/image1.jpg",
-    discount: ""
+    name: "Modern Villa",
+    rating: 4.9,
+    address: {
+      city: "Cape Town",
+      country: "South Africa",
+    },
+    image: "/villa-main.jpg",
+    images: ["/villa-main.jpg", "/villa1.jpg", "/villa2.jpg", "/villa3.jpg"],
+    description: "A beautiful modern villa with all amenities and stunning views.",
+    category: ["Pool", "Wi-Fi", "Kitchen", "Parking"],
+    price: 1200,
+    reviews: [
+      {
+        name: "Thandi",
+        avatar: "/user1.jpg",
+        rating: 5,
+        comment: "Amazing place, will come back!",
+      },
+      {
+        name: "James",
+        avatar: "/user2.jpg",
+        rating: 4,
+        comment: "Very nice and clean!",
+      },
+    ],
   },
-  {
-    name: "Mountain Escape Chalet",
-    address: { state: "Aspen", city: "Colorado", country: "USA" },
-    rating: 4.70,
-    category: ["Mountain View", "Fireplace", "Self Checkin"],
-    price: 1800,
-    offers: { bed: "4", shower: "2", occupants: "5-7" },
-    image: "https://example.com/image2.jpg",
-    discount: "30"
-  },
-  // … (copy the rest of the 20 entries exactly as given)
+  // Add more properties if needed
 ];
